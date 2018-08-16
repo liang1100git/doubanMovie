@@ -1,0 +1,17 @@
+<div class="top250">
+    <a class="top250-header">
+        <h4 class="top250-tit"><%= data.title %></h4>
+    </a>
+    <ul class="top250-list">
+        <%  for(var i in data.subjects){ %>
+        <%  var val = data.subjects[i] %>
+        <li class="top250-item">
+            <a href='<%=`movie.html?id=${val.id}`%>' class="top250-item-link">
+                <span class="top250-item-num"><%= val.rating.average %></span>
+                <span class="top250-item-tit"><%= val.title %></span>
+                <span class="top250-item-date"><%= val.year %></span>
+            </a>
+        </li>
+        <% } %>
+    </ul>
+</div>

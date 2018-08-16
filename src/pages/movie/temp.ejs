@@ -1,0 +1,62 @@
+<div class="container movie">
+
+        <div class="movie-data row" >
+            <div class="col-sm-5">
+                <div class="movie-imgWrap">
+                    <img src=<%= img %> alt="" class="movie-img">
+            
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <h1 class="movie-tit" ><%= title %>
+                <a href=<%= alt %> class="movie-tit-link"  >去豆瓣看看 ></a>
+                </h1>
+                <ul class="movie-dataList" >
+                    <li class="movie-dataItem" ><span class="movie-dataItem-key">上映日期:</span><span class="movie-dataItem-value"><%= year %></span></li>
+                    <li class="movie-dataItem" ><span class="movie-dataItem-key">豆瓣评分:</span><span class="movie-dataItem-value"><%= scorse %></span></li>
+                    <li class="movie-dataItem" ><span class="movie-dataItem-key">类型:</span><span class="movie-dataItem-value">
+                        <% for(var i in tags){ %>
+                        <% var val = tags[i] %>
+                        <% var split = i==tags.length-1?'':' / '; %>
+                        <a  href='<%=  "search.html?tag="+val   %>' class="movie-tags-item" ><%= val %></a><%= split %>
+                        <% } %>
+                    </span></li>
+                    <li class="movie-dataItem" ><span class="movie-dataItem-key">导演:</span><span class="movie-dataItem-value">
+                    
+                    <% for(var i in directors){ %>
+                    <% var val = directors[i] %>
+                    <% var split = i==directors.length-1?'':' / '; %>
+                    <a  href='<%="person.html?id="+val.id%>' class="movie-tags-item" ><%= val.name %></a><%= split %>
+                    <% } %>                   
+                    
+
+                    </span></li>
+                    <li class="movie-dataItem" ><span class="movie-dataItem-key">主演:</span><span class="movie-dataItem-value">
+                <% for(var i in casts ){ %>
+                <% var val = casts[i] %>
+                <% var split = i==casts.length-1?'':' / '; %>
+                <a  href='<%="person.html?id="+val.id%>' class="movie-tags-item" ><%= val.name %></a><%= split %>
+                <% } %>                    
+                    
+                    
+                    </span></li>
+                    <li class="movie-dataItem" ><span class="movie-dataItem-key">原名:</span><span class="movie-dataItem-value"><%= original_title %></span></li>
+                    <li class="movie-dataItem" ><span class="movie-dataItem-key">其他译名:</span><span class="movie-dataItem-value">
+                    
+                    <% for(var i in aka ){ %>
+                    <% var val = aka[i] %>
+                    <% var split = i==aka.length-1?'':' / '; %>
+                    <span  href="#" class="movie-tags-item" ><%= val %></ span><%= split %>
+                    <% } %>         
+
+                    
+                    </span></li>
+                    <li  id="summary" class="movie-dataItem" ><span class="movie-dataItem-key">电影简介:</span><span class="movie-dataItem-value"><%= summary  %></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <%= directorsCard %>
+             <%= castsCard %> 
+        </div>
+    </div>

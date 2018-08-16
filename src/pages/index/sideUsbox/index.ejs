@@ -1,0 +1,22 @@
+<div class="usbox">
+    <a class="usbox-header">
+        <h4 class="usbox-tit">北美票房榜</h4>
+        <span class="usbox-date"><%= data.date %></span>
+    </a>
+    <ul class="usbox-list">
+    <% for(i in data.subjects){  %>
+    <%  var val = data.subjects[i] %>
+    <% var newClass = val.new ? 'new':'';  %>
+        <li class="usbox-item">
+            <a href='<%=`movie.html?id=${val.subject.id}`%>' class="usbox-item-link">
+                <span class="usbox-item-num"><%= val.rank+'.' %></span>
+                <span class='<%= "usbox-item-tit ellipsis "+ newClass %>'   > <%= val.subject.title %></span>
+                <% var box = val.box.toString().replace(/000$/,',000').replace(/([0-9]{3}),/,',$1,') %>
+                <span class="usbox-item-sales"><%= box+'$' %></span>
+                <div class="usbox-item-ctn">
+                </div>
+            </a>
+        </li>
+    <% } %>
+    </ul>
+</div>

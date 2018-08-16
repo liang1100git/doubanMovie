@@ -1,0 +1,13 @@
+.works{
+    &-header{
+        border-bottom: 1px solid $gery-3;
+        margin-bottom: 20px;
+        &-tit{
+            display: inline-block;
+        }
+        &-more{
+            margin-left: 15px;
+            display: inline-block;
+        }
+    }
+}

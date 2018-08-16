@@ -1,0 +1,49 @@
+.movie{
+    &-tit{
+        &-link{
+            font-size: 14px;
+        }
+    }
+    &-data{
+        margin-bottom: 30px;
+    }
+    &-imgWrap{
+        padding: 70% 0px;
+        position: relative;
+        background: $gery-3 url('../../assets/img/imgLoadFail.png') center no-repeat;
+    }
+    &-img{
+        position: absolute;
+        top: 0;bottom: 0;left: 0;right: 0;
+        width: 100%;
+        height: 100%;
+    }
+    &-dataItem{
+        margin: 7px 0;
+        font-size: 16px;
+        &-key{
+            color: $gery-7;
+            font-weight: bold;
+            padding-right: 10px;
+        }   
+        &-value{
+            color: $gery-8;
+        }
+    }
+
+}
+#summary{
+    // position: relative;
+    &>.movie-dataItem{
+
+        &-key{
+            // position: absolute;
+        }
+        &-value{
+            font-size: 14px;
+            color: $gery-6;
+            // display: block;
+            // padding-left: 84px;
+        }
+    }
+}

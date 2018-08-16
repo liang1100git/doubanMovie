@@ -1,0 +1,13 @@
+<div class="tagList">
+    <h3 class="tagList-tit">热门标签</h3>
+    <% for( var i in tagList ){ %>
+    <% var list = tagList[i] %>
+        <dl class="tagList-group">
+            <dt class="tagList-group-tit"><%= list.title %>:</dt>
+            <% for(var j in list.list){ %>
+            <% var item = list.list[j] %>
+            <dd class="tagList-item"><a href='<%= "search.html?tag="+ item %>'  class="tagList-item-link"><%= item %></a></dd>
+            <% } %>
+        </dl>
+    <% } %>
+</div>

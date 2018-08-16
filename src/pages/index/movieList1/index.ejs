@@ -1,0 +1,28 @@
+<div class="moveList1">
+    <div class="moveList1-header">
+        <h3 class="moveList1-tit">
+            <%= data.title %>
+        </h3>
+        <a href="#" class="moveList1-more">显示全部 ></a>
+    </div>
+    <div class="row">
+        <% for (i in data.subjects) { %>
+            <a href='<%= data.subjects[i].alt %>' class="col-xs-6 col-md-3 col-lg-2 moveList1-item-link">
+                <div class="moveList1-item">
+                    <div class="moveList1-item-imgWrap">
+                        <img src='<%= data.subjects[i].images.small %>' alt='<%= data.subjects[i].title %>' class="moveList1-item-img">
+                    </div>
+                    <div class="moveList1-item-ctn">
+                        <h4 class="moveList1-item-tit ellipsis">
+                            <%= data.subjects[i].title %>
+                        </h4>
+                        <p class="moveList1-item-rating">
+                            <%= data.subjects[i].rating.average.toFixed(1) %>
+                                <i class='<%= "icon icon-stars-"+ data.subjects[i].rating.stars %>'></i>
+                        </p>
+                    </div>
+                </div>
+            </a>
+            <% } %>
+    </div>
+</div>

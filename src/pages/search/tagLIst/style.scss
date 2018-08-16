@@ -1,0 +1,33 @@
+.tagList{
+
+    &-tit{
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $gery-3;
+        font-size: 20px;
+    }
+    &-group{
+        margin-bottom: 5px;
+        vertical-align: bottom;
+        &-tit{
+            padding-right: 5px;
+            display: inline-block;
+            color: $gery-6;
+            font-size: 16px;
+            // font-weight: normal;
+        }
+    }
+    &-item{
+        display: inline-block;
+        &-link{
+            padding: 5px;
+            display: block;
+            color: $gery-7;
+            &:hover{
+                
+                background: lightblue;
+                text-decoration: none;
+            }
+        }
+    }
+}

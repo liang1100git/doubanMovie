@@ -1,0 +1,41 @@
+.moveList1{
+    &-header{
+        position: relative;
+        border-bottom: 1px solid $gery-3;
+        margin-bottom: 20px;
+    }
+    &-tit{
+    }
+    &-more{
+        position: absolute;
+        right: 0px;top: 10px;
+    }
+    &-item{
+        margin-bottom: 20px;
+        &-link{
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        text-align: center;
+        &-imgWrap{
+            position: relative;
+            padding: 70% 0;
+        }
+        &-img{
+            position: absolute;
+            top: 0;bottom: 0t;right: 0;left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        &-tit{
+            font-size: 14px;
+            margin: 5px;
+        }
+        &-rating{
+            color: orangered;
+            font-size: 12px;
+        }
+    }
+
+}

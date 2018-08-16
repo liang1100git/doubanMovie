@@ -1,0 +1,110 @@
+.moveCard{
+    cursor: pointer;
+    color: $gery-7;
+    display: block;
+    margin-bottom: 20px;
+    &-imgWrap{
+        position: relative;
+        padding: 70% 0;
+        background: $gery-3 url('../../../assets/img/imgLoadFail.png') center no-repeat;
+    }
+    &-img{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-indent:  -999999px;
+        overflow: hidden;
+    }
+    &-msg{
+        line-height: 24px;
+        height: 48px;
+        text-align: center;
+        overflow: hidden;
+    }
+    &-tit{
+        font-size: 14px;
+    }
+    &-scores{
+        color: orangered;
+    }
+
+    &-cast{
+        text-align-last: left;
+        font-size: 12px;
+        
+        color: $gery-6;
+    }
+    &-mate{
+        color: $gery-6;
+    }
+}
+
+.moveCard-a{
+    &:hover{
+        & .moveCard-img{
+            opacity: 0.75;
+            transition: opacity 0.25s;
+        }
+    }
+}
+
+.moveCard-b{
+    transition: box-shadow 0.25s;
+    &:hover{
+        box-shadow: 1px 1px 7px $gery-5;
+    }
+    & .moveCard{
+        &-msg{
+            position: relative;
+            text-align-last: left;
+            height: auto;
+            line-height: 24px;
+            padding: 0 12px;
+        }
+        &-tit{
+            width: 90%;
+        }
+        &-scores{
+            position: absolute;
+            right: 12px;top: 0;
+        }
+    }
+}
+
+.moveCard-c{
+    &:hover{
+        & .moveCard-msg{
+            height: 48px;
+        }
+    }
+    position: relative;
+    & .moveCard{
+        &-msg{
+            text-align: left;
+            position: absolute;
+            right: 0;left: 0;bottom: 0;
+            color: $gery-2;
+            height: 24px;
+            background: rgba(0, 0, 0, 0.5);
+            transition: height 0.25s;
+        }
+        &-tit{
+            padding-left: 30px;
+        }
+        &-scores{
+            width: 30px;
+            text-align: center;
+            color: orange;
+            position: absolute;
+            left: 0;
+        }
+        &-cast{
+            padding-left: 5px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+}

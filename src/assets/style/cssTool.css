@@ -1,0 +1,27 @@
+.clear::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+/* 隐藏文字 */
+.hide-text {
+    overflow: hidden;
+    text-indent: 101%;
+    white-space: nowrap;
+}
+/* 单行省略 */
+.ellipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.icon{
+    display: inline-block;
+}

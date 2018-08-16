@@ -1,0 +1,21 @@
+.top250{
+    margin-bottom: 30px;
+    &-header{
+        display: block;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $gery-3;
+    }
+    &-item{
+        position: relative;
+        &-num{
+            color: orangered;
+            display: inline-block;
+            width: 25px;
+        }
+        &-date{
+            position: absolute;
+            right: 0;
+        }
+    }
+}
