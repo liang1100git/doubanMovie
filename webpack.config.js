@@ -84,7 +84,7 @@ module.exports = {
                     'css-loader'],
             },{
                 test:/\.(gif|jpg|png|woff|woff2|svg|eot|ttf)$/,
-                exclude:[path.resolve(__dirname,'src/assets/icon/sprite.png')],
+                // exclude:[path.resolve(__dirname,'src/assets/icon/sprite.png')],
                 loader:'url-loader',
                 options:{
                     limit: 8192,
@@ -93,15 +93,15 @@ module.exports = {
                     publicPath: '/dist/'
                 },
             },
-            {
-                // 雪碧图必须使用file-loader
-                test: path.resolve(__dirname,'src/assets/icon/sprite.png'),
-                loader: 'file-loader',
-                options:{
-                    publicPath: '/dist/',
-                    name:'[name].[hash].[ext]'
-                }
-            },
+            // {
+            //     // 雪碧图必须使用file-loader
+            //     test: path.resolve(__dirname,'src/assets/icon/sprite.png'),
+            //     loader: 'file-loader',
+            //     options:{
+            //         publicPath: '/dist/',
+            //         name:'[name].[hash].[ext]'
+            //     }
+            // },
             {
                 test: /\.html$/i,
                 loader: 'html-withimg-loader',
