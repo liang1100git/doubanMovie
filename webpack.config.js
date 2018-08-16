@@ -15,13 +15,13 @@ module.exports = {
         // publicPath:'/dist',
         publicPath:'',
         path: path.resolve(__dirname,'./dist'),
-        filename: '[name]/main.[hash].js',
-        chunkFilename:'chunks/[name].[hash].js',
+        filename: '[name].main.[hash].js',
+        chunkFilename:'chunk.[name].[hash].js',
     },
     optimization:{
-        runtimeChunk:{
-            name: entrypoint => `runtimechunk~${entrypoint.name}`
-        },
+        // runtimeChunk:{
+        //     name: entrypoint => `runtimechunk~${entrypoint.name}`
+        // },
         splitChunks: {
             chunks: 'async',
             minSize: 30000,
@@ -89,7 +89,7 @@ module.exports = {
                 options:{
                     limit: 8192,
                     fallback:'file-loader',
-                    name: 'imgs/[name].[hash].[ext]',
+                    name: '[name].[hash].[ext]',
                     publicPath: '/dist/'
                 },
             },
@@ -99,7 +99,7 @@ module.exports = {
                 loader: 'file-loader',
                 options:{
                     publicPath: '/dist/',
-                    name:'imgs/[name].[hash].[ext]'
+                    name:'[name].[hash].[ext]'
                 }
             },
             {
@@ -122,8 +122,8 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new CssPlugin({
-            filename: '[name].css',
-            chunkFilename:"chunks/[name].[hash].css",
+            filename: '[name].[hash].css',
+            chunkFilename:"[name].chunk.[hash].css",
         }),
         new webpack.ProvidePlugin({
             "window.jQuery": 'jquery',

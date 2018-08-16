@@ -13,7 +13,7 @@ const createHtmlEntry = (pages) => {
     let htmlEntry = [];
     pages.forEach((val) => {
         htmlEntry.push(new HtmlPlugin({
-            filename: `./pages/${val}.html`,
+            filename: `${val}.html`,
             template: `./src/pages/${val}/index.html`,
             chunks: [
                 val,
